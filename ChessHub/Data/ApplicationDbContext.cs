@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ChessHub.Models;
 
 namespace ChessHub.Data
 {
@@ -9,5 +10,7 @@ namespace ChessHub.Data
             : base(options)
         {
         }
+
+        public DbSet<Player> Players { get; set; }
     }
 }
